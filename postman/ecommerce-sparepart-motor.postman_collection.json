@@ -1,0 +1,698 @@
+{
+	"info": {
+		"_postman_id": "394d94d8-e168-489a-a1e5-573ff3140db4",
+		"name": "ecommerce-sparepart-motor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":0,\"name\":\"reno\",\"username\":\"renosyah\",\"password\":\"123\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/users/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/users/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":5,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/users/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":0,\"name\":\"\",\"username\":\"renosyah\",\"password\":\"123\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/users/login.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"login.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":3,\"name\":\"reno syahputra\",\"username\":\"renosyah\",\"password\":\"12345\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/users/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":3,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/users/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":0,\"name\":\"reno\",\"username\":\"renosyah\",\"email\":\"reno@gmail.com\",\"password\":\"123\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"customers",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"customers",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":2,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"customers",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":0,\"name\":\"\",\"username\":\"renosyah\",\"password\":\"123\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/login.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"customers",
+								"login.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1,\"name\":\"reno syahputra\",\"username\":\"renosyah\",\"email\":\"reno@gmail.com\",\"password\":\"12345\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"customers",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"customers",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":0,\"name\":\"spare part\",\"image_url\":\"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"categories",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"categories",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1,\"name\":\"\",\"image_url\":\"\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"categories",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1,\"name\":\"spare part 1\",\"image_url\":\"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"categories",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1,\"name\":\"\",\"image_url\":\"\"}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"categories",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/products/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"products",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"categories_id\": 1,\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/products/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"products",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"categories_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/products/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"products",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 2000,\n    \"stock\": 14,\n    \"rating\": 3,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\"\n}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/products/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"products",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"categories_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\"\n}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/products/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"products",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "carts",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"customers_id\": 2,\n    \"products_id\": 2,\n    \"price\": 200,\n    \"quantity\": 2,\n    \"sub_total\": 400\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"carts",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"customers_id\": 2,\"search_by\":\"products_id\",\"search_value\":\"\",\"order_by\":\"products_id\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"carts",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customers_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"carts",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customers_id\": 2,\n    \"products_id\": 2,\n    \"price\": 1200,\n    \"quantity\": 2,\n    \"sub_total\": 2400\n}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"carts",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customers_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}"
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"carts",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
