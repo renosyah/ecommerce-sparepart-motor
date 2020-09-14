@@ -6,7 +6,7 @@ include_once "../handler.php";
 // menggabungkan kode dari file kota.php
 // yg mana model kota dibutuhkan
 // untuk query
-include("../../model/categories.php");
+include("../../model/transactions.php");
 
 // menggabungkan kode dari file db.php
 // yg mana db digunakan untuk memanggil koneksi
@@ -23,12 +23,11 @@ include("../../model/list_query.php");
 // fungsi yg akan dipanggil untuk
 // menghandle request yg dikirim client
 $data = handle_request();
-
 $query = new list_query();
 $query->set($data);
 
-$usr = new categories();
-$result = $usr->all(get_connection(include("../config.php")),$query);
+$usr = new transactions();
+$result = $usr->all(get_connection(include("../config.php")),$query,$data->customers_id);
 
 echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>

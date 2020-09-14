@@ -52,7 +52,9 @@ CREATE TABLE transactions(
     customers_id INT(11) NOT NULL,
     payments_id INT(11) NOT NULL,
     address TEXT,
+    shipment_fee INT,
     total INT,
+    expired_date DATETIME NULL,
     FOREIGN KEY (customers_id) REFERENCES customers(id),
     FOREIGN KEY (payments_id) REFERENCES payments(id)
 );
