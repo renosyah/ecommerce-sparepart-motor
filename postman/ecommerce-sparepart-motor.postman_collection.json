@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "users",
+			"name": "user",
 			"item": [
 				{
 					"name": "add",
@@ -15,17 +15,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":0,\"name\":\"reno\",\"username\":\"renosyah\",\"password\":\"123\"}"
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"reno\",\n    \"username\": \"renosyah\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/users/add.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/user/add.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"users",
+								"user",
 								"add.php"
 							]
 						}
@@ -39,17 +44,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+							"raw": "{\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/users/list.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/user/list.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"users",
+								"user",
 								"list.php"
 							]
 						}
@@ -63,17 +73,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":5,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"\",\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/users/one.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/user/one.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"users",
+								"user",
 								"one.php"
 							]
 						}
@@ -87,17 +102,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":0,\"name\":\"\",\"username\":\"renosyah\",\"password\":\"123\"}"
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"username\": \"renosyah\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/users/login.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/user/login.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"users",
+								"user",
 								"login.php"
 							]
 						}
@@ -111,17 +131,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":3,\"name\":\"reno syahputra\",\"username\":\"renosyah\",\"password\":\"12345\"}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"reno syahputra\",\n    \"username\": \"renosyah\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/users/update.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/user/update.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"users",
+								"user",
 								"update.php"
 							]
 						}
@@ -135,17 +160,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":3,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"\",\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/users/delete.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/user/delete.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"users",
+								"user",
 								"delete.php"
 							]
 						}
@@ -156,7 +186,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "customers",
+			"name": "customer",
 			"item": [
 				{
 					"name": "add",
@@ -165,17 +195,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":0,\"name\":\"reno\",\"username\":\"renosyah\",\"email\":\"reno@gmail.com\",\"password\":\"123\"}"
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"reno\",\n    \"username\": \"renosyah\",\n    \"email\": \"reno@gmail.com\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/add.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/add.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"add.php"
 							]
 						}
@@ -189,17 +224,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+							"raw": "{\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/list.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/list.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"list.php"
 							]
 						}
@@ -213,17 +253,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":2,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"\",\n    \"username\": \"\",\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/one.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/one.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"one.php"
 							]
 						}
@@ -237,17 +282,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":0,\"name\":\"\",\"username\":\"renosyah\",\"password\":\"123\"}"
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"username\": \"renosyah\",\n    \"email\": \"\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/login.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/login.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"login.php"
 							]
 						}
@@ -261,400 +311,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"reno syahputra\",\"username\":\"renosyah\",\"email\":\"reno@gmail.com\",\"password\":\"12345\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/update.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"customers",
-								"update.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"\",\"username\":\"\",\"password\":\"\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customers/delete.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"customers",
-								"delete.php"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "payments",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":0,\"name\":\"Bank BNI\",\"detail\":\"1888-8888-8888888-8888\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payments/add.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"payments",
-								"add.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "list",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payments/list.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"payments",
-								"list.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "one",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"\",\"detail\":\"\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payments/one.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"payments",
-								"one.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"Bank BNI Indonesia\",\"detail\":\"1888-8888-8888888-8888\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payments/update.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"payments",
-								"update.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"\",\"detail\":\"\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payments/delete.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"payments",
-								"delete.php"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "categories",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":0,\"name\":\"Tanki Bensin\",\"image_url\":\"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/add.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"categories",
-								"add.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "list",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/list.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"categories",
-								"list.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "one",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"\",\"image_url\":\"\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/one.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"categories",
-								"one.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":3,\"name\":\"Tanki Bensin\",\"image_url\":\"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/update.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"categories",
-								"update.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"id\":1,\"name\":\"\",\"image_url\":\"\"}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/categories/delete.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"categories",
-								"delete.php"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "products",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor\"\n}",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"reno syahputra\",\n    \"username\": \"renosyah\",\n    \"email\": \"reno@gmail.com\",\n    \"password\": \"12345\"\n}",
 							"options": {
 								"raw": {
-									"language": "text"
+									"language": "json"
 								}
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/products/add.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/update.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"products",
-								"add.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "list",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"categories_id\": 1,\"search_by\":\"name\",\"search_value\":\"\",\"order_by\":\"name\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/products/list.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"products",
-								"list.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "one",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"categories_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\",\n    \"detail\": \"\"\n}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/products/one.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"products",
-								"one.php"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 2000,\n    \"stock\": 14,\n    \"rating\": 3,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor update\"\n}"
-						},
-						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/products/update.php",
-							"host": [
-								"{{protocol}}{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"products",
+								"customer",
 								"update.php"
 							]
 						}
@@ -668,17 +340,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"categories_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\"\n}"
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"\",\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/products/delete.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/delete.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"products",
+								"customer",
 								"delete.php"
 							]
 						}
@@ -689,7 +366,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "carts",
+			"name": "payment",
 			"item": [
 				{
 					"name": "add",
@@ -698,22 +375,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"customers_id\": 2,\n    \"products_id\": 2,\n    \"price\": 200,\n    \"quantity\": 2,\n    \"sub_total\": 400\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Bank BNI\",\n    \"detail\": \"1888-8888-8888888-8888\"\n}",
 							"options": {
 								"raw": {
-									"language": "text"
+									"language": "json"
 								}
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/add.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/add.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"carts",
+								"payment",
 								"add.php"
 							]
 						}
@@ -727,17 +404,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"customers_id\": 2,\"search_by\":\"products_id\",\"search_value\":\"\",\"order_by\":\"products_id\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+							"raw": "{\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/list.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/list.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"carts",
+								"payment",
 								"list.php"
 							]
 						}
@@ -751,17 +433,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"customers_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"\",\n    \"detail\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/one.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/one.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"carts",
+								"payment",
 								"one.php"
 							]
 						}
@@ -775,17 +462,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"customers_id\": 2,\n    \"products_id\": 2,\n    \"price\": 1200,\n    \"quantity\": 2,\n    \"sub_total\": 2400\n}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Bank BNI Indonesia\",\n    \"detail\": \"1888-8888-8888888-8888\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/update.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/update.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"carts",
+								"payment",
 								"update.php"
 							]
 						}
@@ -799,17 +491,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"customers_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}"
+							"raw": "{\n    \"id\": 2,\n    \"name\": \"\",\n    \"detail\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/carts/delete.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/delete.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"carts",
+								"payment",
 								"delete.php"
 							]
 						}
@@ -820,7 +517,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "transactions",
+			"name": "category",
 			"item": [
 				{
 					"name": "add",
@@ -829,22 +526,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"customers_id\": 2,\n    \"payments_id\": 2,\n    \"address\":\"Jl Janti\",\n    \"shipment_fee\":4000,\n    \"total\": 20000,\n    \"expired_date\": \"2008-11-11 13:23:44\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Tanki Bensin\",\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"\n}",
 							"options": {
 								"raw": {
-									"language": "text"
+									"language": "json"
 								}
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transactions/add.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/category/add.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"transactions",
+								"category",
 								"add.php"
 							]
 						}
@@ -858,17 +555,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"customers_id\": 2,\"search_by\":\"expired_date\",\"search_value\":\"\",\"order_by\":\"expired_date\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+							"raw": "{\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transactions/list.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/category/list.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"transactions",
+								"category",
 								"list.php"
 							]
 						}
@@ -882,17 +584,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"customers_id\": 0,\n    \"payments_id\": 0,\n    \"address\":\"\",\n    \"shipment_fee\":0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"\",\n    \"image_url\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transactions/one.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/category/one.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"transactions",
+								"category",
 								"one.php"
 							]
 						}
@@ -906,17 +613,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"customers_id\": 2,\n    \"payments_id\": 2,\n    \"address\":\"Jl Janti DIY\",\n    \"shipment_fee\":3000,\n    \"total\": 20000,\n    \"expired_date\": \"2008-11-11 13:23:44\"\n}"
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Tanki Bensin 1\",\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transactions/update.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/category/update.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"transactions",
+								"category",
 								"update.php"
 							]
 						}
@@ -930,17 +642,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 2,\n    \"customers_id\": 0,\n    \"payments_id\": 0,\n    \"address\":\"\",\n    \"shipment_fee\":0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}"
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"\",\n    \"image_url\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transactions/delete.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/category/delete.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"transactions",
+								"category",
 								"delete.php"
 							]
 						}
@@ -951,7 +668,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "detail_transactions",
+			"name": "product",
 			"item": [
 				{
 					"name": "add",
@@ -960,22 +677,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"transactions_id\": 3,\n    \"products_id\": 2,\n    \"price\": 200,\n    \"quantity\": 2,\n    \"sub_total\": 400\n}",
+							"raw": "{\n    \"id\": 0,\n    \"category_id\": 1,\n    \"name\": \"mesin 3\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor\"\n}",
 							"options": {
 								"raw": {
-									"language": "text"
+									"language": "json"
 								}
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transactions/add.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/product/add.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"detail_transactions",
+								"product",
 								"add.php"
 							]
 						}
@@ -989,17 +706,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"transactions_id\": 3,\"search_by\":\"products_id\",\"search_value\":\"\",\"order_by\":\"products_id\",\"order_dir\":\"asc\",\"offset\":0,\"limit\":10}"
+							"raw": "{\n    \"category_id\": 1,\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transactions/list.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/product/list.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"detail_transactions",
+								"product",
 								"list.php"
 							]
 						}
@@ -1013,17 +735,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 3,\n    \"transactions_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}"
+							"raw": "{\n    \"id\": 1,\n    \"category_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\",\n    \"detail\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transactions/one.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/product/one.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"detail_transactions",
+								"product",
 								"one.php"
 							]
 						}
@@ -1037,17 +764,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 3,\n    \"transactions_id\": 3,\n    \"products_id\": 2,\n    \"price\": 1200,\n    \"quantity\": 12,\n    \"sub_total\": 4100\n}"
+							"raw": "{\n    \"id\": 1,\n    \"category_id\": 1,\n    \"name\": \"mesin 1a\",\n    \"price\": 2000,\n    \"stock\": 14,\n    \"rating\": 3,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transactions/update.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/product/update.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"detail_transactions",
+								"product",
 								"update.php"
 							]
 						}
@@ -1061,17 +793,475 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 3,\n    \"transactions_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}"
+							"raw": "{\n    \"id\": 4,\n    \"category_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transactions/delete.php",
+							"raw": "{{protocol}}{{host}}:{{port}}/api/product/delete.php",
 							"host": [
 								"{{protocol}}{{host}}"
 							],
 							"port": "{{port}}",
 							"path": [
 								"api",
-								"detail_transactions",
+								"product",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"customer_id\": 1,\n    \"product_id\": 1,\n    \"price\": 200,\n    \"quantity\": 2,\n    \"sub_total\": 400\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"search_by\": \"product_id\",\n    \"search_value\": \"\",\n    \"order_by\": \"product_id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customer_id\": 0,\n    \"product_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customer_id\": 1,\n    \"product_id\": 1,\n    \"price\": 1300,\n    \"quantity\": 2,\n    \"sub_total\": 2400\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"customer_id\": 0,\n    \"product_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"customer_id\": 1,\n    \"payment_id\": 1,\n    \"address\": \"Jl Janti\",\n    \"shipment_fee\": 4000,\n    \"total\": 20000,\n    \"expired_date\": \"2008-11-11 13:23:44\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"transaction",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"search_by\": \"expired_date\",\n    \"search_value\": \"\",\n    \"order_by\": \"expired_date\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"transaction",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customer_id\": 0,\n    \"payment_id\": 0,\n    \"address\": \"\",\n    \"shipment_fee\": 0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"transaction",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"customer_id\": 1,\n    \"payment_id\": 1,\n    \"address\": \"Jl Janti DIY\",\n    \"shipment_fee\": 3000,\n    \"total\": 20000,\n    \"expired_date\": \"2008-11-11 13:23:44\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"transaction",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"customers_id\": 0,\n    \"payments_id\": 0,\n    \"address\": \"\",\n    \"shipment_fee\": 0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"transaction",
+								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "detail_transaction",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"transaction_id\": 1,\n    \"product_id\": 1,\n    \"price\": 200,\n    \"quantity\": 2,\n    \"sub_total\": 400\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"detail_transaction",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transaction_id\": 1,\n    \"search_by\": \"product_id\",\n    \"search_value\": \"\",\n    \"order_by\": \"product_id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/list.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"detail_transaction",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"transaction_id\": 0,\n    \"product_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/one.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"detail_transaction",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"transaction_id\": 1,\n    \"product_id\": 1,\n    \"price\": 1200,\n    \"quantity\": 12,\n    \"sub_total\": 4100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/update.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"detail_transaction",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"transactions_id\": 0,\n    \"products_id\": 0,\n    \"price\": 0,\n    \"quantity\": 0,\n    \"sub_total\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/delete.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"detail_transaction",
 								"delete.php"
 							]
 						}
