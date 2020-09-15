@@ -1,17 +1,17 @@
-CREATE TABLE users(
+CREATE TABLE user(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name TEXT,
     username TEXT,
     password TEXT
 );
 
-CREATE TABLE payments(
+CREATE TABLE payment(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name TEXT,
     detail TEXT
 );
 
-CREATE TABLE customers(
+CREATE TABLE customer(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name TEXT,
     username TEXT,
@@ -19,54 +19,54 @@ CREATE TABLE customers(
     password TEXT  
 );
 
-CREATE TABLE categories(
+CREATE TABLE category(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name TEXT,
     image_url TEXT
 );
 
-CREATE TABLE products(
+CREATE TABLE product(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    categories_id INT(11) NOT NULL,
+    category_id INT(11) NOT NULL,
     name TEXT,
     price INT,
     image_url TEXT,
     stock INT,
     rating INT,
     detail TEXT,
-    FOREIGN KEY (categories_id) REFERENCES categories(id)
+    FOREIGN KEY (category_id) REFERENCES category(id)
 );
 
-CREATE TABLE carts(
+CREATE TABLE cart(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    customers_id INT(11) NOT NULL,
-    products_id INT(11) NOT NULL,
+    customer_id INT(11) NOT NULL,
+    product_id INT(11) NOT NULL,
     quantity INT,
     price INT,
     sub_total INT,
-    FOREIGN KEY (customers_id) REFERENCES customers(id),
-    FOREIGN KEY (products_id) REFERENCES products(id)
+    FOREIGN KEY (customer_id) REFERENCES customer(id),
+    FOREIGN KEY (product_id) REFERENCES product(id)
 );
 
-CREATE TABLE transactions(
+CREATE TABLE transaction(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    customers_id INT(11) NOT NULL,
-    payments_id INT(11) NOT NULL,
+    customer_id INT(11) NOT NULL,
+    payment_id INT(11) NOT NULL,
     address TEXT,
     shipment_fee INT,
     total INT,
     expired_date DATETIME NULL,
-    FOREIGN KEY (customers_id) REFERENCES customers(id),
-    FOREIGN KEY (payments_id) REFERENCES payments(id)
+    FOREIGN KEY (customer_id) REFERENCES customer(id),
+    FOREIGN KEY (payment_id) REFERENCES payment(id)
 );
 
-CREATE TABLE detail_transactions(
+CREATE TABLE detail_transaction(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    transactions_id INT(11) NOT NULL,
-    products_id INT(11) NOT NULL,
+    transaction_id INT(11) NOT NULL,
+    product_id INT(11) NOT NULL,
     quantity INT,
     price INT,
     sub_total INT,
-    FOREIGN KEY (transactions_id) REFERENCES transactions(id),
-    FOREIGN KEY (products_id) REFERENCES products(id)
+    FOREIGN KEY (transaction_id) REFERENCES transaction(id),
+    FOREIGN KEY (product_id) REFERENCES product(id)
 );

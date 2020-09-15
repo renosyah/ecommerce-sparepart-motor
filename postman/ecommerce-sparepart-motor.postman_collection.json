@@ -567,7 +567,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor\"\n}",
 							"options": {
 								"raw": {
 									"language": "text"
@@ -620,7 +620,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"categories_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\"\n}"
+							"raw": "{\n    \"id\": 2,\n    \"categories_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\",\n    \"detail\": \"\"\n}"
 						},
 						"url": {
 							"raw": "{{protocol}}{{host}}:{{port}}/api/products/one.php",
@@ -644,7 +644,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 2000,\n    \"stock\": 14,\n    \"rating\": 3,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\"\n}"
+							"raw": "{\n    \"id\": 2,\n    \"categories_id\": 1,\n    \"name\": \"mesin\",\n    \"price\": 2000,\n    \"stock\": 14,\n    \"rating\": 3,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor update\"\n}"
 						},
 						"url": {
 							"raw": "{{protocol}}{{host}}:{{port}}/api/products/update.php",
