@@ -33,6 +33,7 @@ CREATE TABLE products(
     image_url TEXT,
     stock INT,
     rating INT,
+    detail TEXT,
     FOREIGN KEY (categories_id) REFERENCES categories(id)
 );
 

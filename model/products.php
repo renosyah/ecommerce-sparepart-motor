@@ -13,6 +13,7 @@ class products {
     public $stock;
     public $rating;
     public $image_url;
+    public $detail;
 
     public function __construct(){
     }
@@ -25,14 +26,15 @@ class products {
         $this->stock = (int) $data->stock;
         $this->rating = (int) $data->rating;
         $this->image_url = $data->image_url;
+        $this->detail = $data->detail;
     }
 
     public function add($db) {
         $result_query = new result_query();
         $result_query->data = "ok";
-        $query = "INSERT INTO products (name,categories_id,price,stock,rating,image_url) VALUES (?,?,?,?,?,?)";
+        $query = "INSERT INTO products (name,categories_id,price,stock,rating,image_url,detail) VALUES (?,?,?,?,?,?,?)";
         $stmt = $db->prepare($query);
-        $stmt->bind_param('siiiis', $this->name, $this->categories_id, $this->price, $this->stock, $this->rating, $this->image_url);
+        $stmt->bind_param('siiiiss', $this->name, $this->categories_id, $this->price, $this->stock, $this->rating, $this->image_url, $this->detail);
         $stmt->execute();
         if ($stmt->error != ""){
             $result_query->error =  "error at add new products : ".$stmt->error;
@@ -45,7 +47,7 @@ class products {
     public function one($db) {
         $result_query = new result_query();
         $one = new products();
-        $query = "SELECT id,name,categories_id,price,stock,rating,image_url FROM products WHERE id=? LIMIT 1";
+        $query = "SELECT id,name,categories_id,price,stock,rating,image_url,detail FROM products WHERE id=? LIMIT 1";
         $stmt = $db->prepare($query);
         $stmt->bind_param('i', $this->id);
         $stmt->execute();      
@@ -67,6 +69,7 @@ class products {
         $one->stock = $result['stock'];
         $one->rating = $result['rating'];
         $one->image_url = $result['image_url'];
+        $one->detail = $result['detail'];
         $result_query->data = $one;
         $stmt->close();
         return $result_query;
@@ -76,7 +79,7 @@ class products {
         $result_query = new result_query();
         $all = array();
         $query = "SELECT 
-                    id,name,categories_id,price,stock,rating,image_url
+                    id,name,categories_id,price,stock,rating,image_url,detail
                 FROM 
                     products
                 WHERE
@@ -114,6 +117,7 @@ class products {
             $one->stock = $result['stock'];
             $one->rating = $result['rating'];
             $one->image_url = $result['image_url'];
+            $one->detail = $result['detail'];
             array_push($all,$one);
         }
         $result_query->data = $all;
@@ -124,9 +128,9 @@ class products {
     public function update($db) {
         $result_query = new result_query();
         $result_query->data = "ok";
-        $query = "UPDATE products SET name = ?,categories_id = ?,price = ?,stock = ?,rating = ?,image_url = ? WHERE id=?";
+        $query = "UPDATE products SET name = ?,categories_id = ?,price = ?,stock = ?,rating = ?,image_url = ?,detail = ? WHERE id=?";
         $stmt = $db->prepare($query);
-        $stmt->bind_param('siiiisi', $this->name,$this->categories_id,$this->price,$this->stock,$this->rating,$this->image_url,$this->id);
+        $stmt->bind_param('siiiisi', $this->name,$this->categories_id,$this->price,$this->stock,$this->rating,$this->image_url,$this->detail,$this->id);
         $stmt->execute();
         if ($stmt->error != ""){
             $result_query->error = "error at update one products : ".$stmt->error;
