@@ -14,24 +14,20 @@ include("../../model/cart.php");
 include("../../model/db.php");
 
 
+// menggabungkan kode dari file list_query
+// yg mana list_query digunakan sebagai
+// object yg digunakan untuk parameter query
+include("../../model/list_query.php");
+
+
 // fungsi yg akan dipanggil untuk
 // menghandle request yg dikirim client
 $data = handle_request();
+$query = new list_query();
+$query->set($data);
 
 $usr = new cart();
-$usr->set($data);
-
-$check = $usr->one_by_product(get_connection(include("../config.php")));
-if ($check->data != null){
-    $check->data->quantity++;
-    $usr->set($check->data);
-    $result = $usr->update(get_connection(include("../config.php")));
-
-    echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    exit;
-}
-
-$result = $usr->add(get_connection(include("../config.php")));
+$result = $usr->all_with_product(get_connection(include("../config.php")),$query,$data->customer_id);
 
 echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>

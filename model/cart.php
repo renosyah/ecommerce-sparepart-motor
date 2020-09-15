@@ -1,9 +1,9 @@
 <?php
 
-// menggabungkan kode dari file result_query.php
-// yg mana result_query digunakan sebagai
-// object yg digunakan untuk hasil
-include("result_query.php");
+// menggabungkan kode dari file product.php
+// yg mana model ini dibutuhkan
+// untuk query
+include("product.php");
 
 class cart {
     public $id;
@@ -69,6 +69,57 @@ class cart {
         return $result_query;
     }
 
+    public function one_by_product($db) {
+        $result_query = new result_query();
+        $one = new cart();
+        $query = "SELECT id,customer_id,product_id,quantity,price,sub_total FROM cart WHERE product_id=? AND customer_id=? LIMIT 1";
+        $stmt = $db->prepare($query);
+        $stmt->bind_param('ii',$this->product_id,$this->customer_id);
+        $stmt->execute();      
+        if ($stmt->error != ""){
+            $result_query-> error = "error at query one cart: ".$stmt->error;
+            $stmt->close();
+            return $result_query;
+        }
+        $rows = $stmt->get_result();
+        if($rows->num_rows == 0){
+            $stmt->close();
+            return $result_query;
+        }
+        $result = $rows->fetch_assoc();
+        $one->id = $result['id'];
+        $one->customer_id = $result['customer_id'];
+        $one->product_id = $result['product_id'];
+        $one->quantity = $result['quantity'];
+        $one->price = $result['price'];
+        $one->sub_total = $result['sub_total'];
+        $result_query->data = $one;
+        $stmt->close();
+        return $result_query;
+    }
+
+    public function total($db,$customer_id) {
+        $result_query = new result_query();
+        $query = "SELECT SUM(sub_total) as total FROM cart WHERE customer_id = ?";
+        $stmt = $db->prepare($query);
+        $stmt->bind_param('i', $customer_id);
+        $stmt->execute();      
+        if ($stmt->error != ""){
+            $result_query-> error = "error at query one cart: ".$stmt->error;
+            $stmt->close();
+            return $result_query;
+        }
+        $rows = $stmt->get_result();
+        if($rows->num_rows == 0){
+            $stmt->close();
+            return $result_query;
+        }
+        $result = $rows->fetch_assoc();
+        $result_query->data = (int) $result['total'];
+        $stmt->close();
+        return $result_query;
+    }
+
     public function all($db,$list_query,$customer_id) {
         $result_query = new result_query();
         $all = array();
@@ -110,6 +161,60 @@ class cart {
             $one->quantity = $result['quantity'];
             $one->price = $result['price'];
             $one->sub_total = $result['sub_total'];
+            array_push($all,$one);
+        }
+        $result_query->data = $all;
+        $stmt->close();
+        return $result_query;
+    }
+
+    public function all_with_product($db,$list_query,$customer_id) {
+        $result_query = new result_query();
+        $all = array();
+        $query = "SELECT 
+                    id,customer_id,product_id,quantity,price,sub_total
+                FROM 
+                    cart
+                WHERE
+                    ".$list_query->search_by." LIKE ?
+                AND
+                    customer_id = ?
+                ORDER BY
+                    ".$list_query->order_by." ".$list_query->order_dir." 
+                LIMIT ? 
+                OFFSET ?";
+        $stmt = $db->prepare($query);
+        $search = "%".$list_query->search_value."%";
+        $offset = $list_query->offset;
+        $limit =  $list_query->limit;
+        $stmt->bind_param('siii',$search ,$customer_id ,$limit, $offset);
+        $stmt->execute();
+        if ($stmt->error != ""){
+            $result_query-> error = "error at query all cart : ".$stmt->error;
+            $stmt->close();
+            return $result_query;
+        }
+        $rows = $stmt->get_result();
+        if($rows->num_rows == 0){
+            $stmt->close();
+            $result_query->data = $all;
+            return $result_query;
+        }
+
+        while ($result = $rows->fetch_assoc()){
+            $one = new cart();
+            $one->id = $result['id'];
+            $one->customer_id = $result['customer_id'];
+            $one->product_id = $result['product_id'];
+            $one->quantity = $result['quantity'];
+            $one->price = $result['price'];
+            $one->sub_total = $result['sub_total'];
+
+            $usr = new product();
+            $usr->id = $one->product_id;
+            $result = $usr->one($db);
+            $one->product = $result->data;
+
             array_push($all,$one);
         }
         $result_query->data = $all;

@@ -19,19 +19,7 @@ include("../../model/db.php");
 $data = handle_request();
 
 $usr = new cart();
-$usr->set($data);
-
-$check = $usr->one_by_product(get_connection(include("../config.php")));
-if ($check->data != null){
-    $check->data->quantity++;
-    $usr->set($check->data);
-    $result = $usr->update(get_connection(include("../config.php")));
-
-    echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    exit;
-}
-
-$result = $usr->add(get_connection(include("../config.php")));
+$result = $usr->total(get_connection(include("../config.php")),$data->customer_id);
 
 echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
