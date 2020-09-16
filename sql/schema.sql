@@ -50,6 +50,7 @@ CREATE TABLE cart(
 
 CREATE TABLE transaction(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ref_id TEXT,
     customer_id INT(11) NOT NULL,
     payment_id INT(11) NOT NULL,
     address TEXT,
