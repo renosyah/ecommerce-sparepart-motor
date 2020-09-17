@@ -282,7 +282,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"username\": \"renosyah\",\n    \"email\": \"\",\n    \"password\": \"123\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"username\": \"renosyah\",\n    \"email\": \"\",\n    \"password\": \"12345\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -375,7 +375,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"Bank BNI\",\n    \"detail\": \"1888-8888-8888888-8888\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Bank BCA\",\n    \"detail\": \"1555-5555-55555555-5555\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -526,7 +526,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"Tanki Bensin\",\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Tanki Bensin 6\",\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -613,7 +613,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"name\": \"Tanki Bensin 1\",\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"\n}",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"Tanki Bensin 3\",\n    \"image_url\": \"https://static.thenounproject.com/png/378251-200.png\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -764,7 +764,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"category_id\": 1,\n    \"name\": \"mesin 1a\",\n    \"price\": 2000,\n    \"stock\": 14,\n    \"rating\": 3,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor update\"\n}",
+							"raw": "{\n    \"id\": 3,\n    \"category_id\": 1,\n    \"name\": \"mesin 3a\",\n    \"price\": 2300,\n    \"stock\": 15,\n    \"rating\": 3,\n    \"image_url\": \"https://image.made-in-china.com/43f34j00IvuEbGVPqwgT/Tianda-156fmi-F28-125cc-Motorcycle-Engine-Assembley-F28-CG125-.jpg\",\n    \"detail\": \"ini produk untuk motor update\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -880,6 +880,35 @@
 					"response": []
 				},
 				{
+					"name": "list detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"search_by\": \"product_id\",\n    \"search_value\": \"\",\n    \"order_by\": \"product_id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/list_detail.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"list_detail.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "one",
 					"request": {
 						"method": "POST",
@@ -961,6 +990,35 @@
 								"api",
 								"cart",
 								"delete.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/total.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"cart",
+								"total.php"
 							]
 						}
 					},
@@ -1054,6 +1112,35 @@
 								"api",
 								"transaction",
 								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one by ref",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"ref_id\" : \"apAFpnuMKn\",\n    \"customer_id\": 0,\n    \"payment_id\": 0,\n    \"address\": \"\",\n    \"shipment_fee\": 0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/one_by_ref.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"transaction",
+								"one_by_ref.php"
 							]
 						}
 					},
@@ -1159,7 +1246,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"transaction_id\": 1,\n    \"search_by\": \"product_id\",\n    \"search_value\": \"\",\n    \"order_by\": \"product_id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"transaction_id\": 42,\n    \"search_by\": \"product_id\",\n    \"search_value\": \"\",\n    \"order_by\": \"product_id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1263,6 +1350,41 @@
 								"api",
 								"detail_transaction",
 								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "checkout",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 1,\n    \"payment_id\": 1,\n    \"address\": \"Jl Janti\",\n    \"total\": 1400\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}:{{port}}/api/checkout/add.php",
+							"host": [
+								"{{protocol}}{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"checkout",
+								"add.php"
 							]
 						}
 					},

@@ -77,7 +77,7 @@ class checkout {
             return $result_query;
         }
         
-        $result_query->data = "ok";
+        $result_query->data = $ref_id;
 
         return $result_query;
     }

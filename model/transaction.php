@@ -75,6 +75,37 @@ class transaction {
         return $result_query;
     }
 
+    public function one_by_ref($db) {
+        $result_query = new result_query();
+        $one = new transaction();
+        $query = "SELECT id,ref_id,customer_id,payment_id,address,shipment_fee,total,expired_date FROM transaction WHERE ref_id=? LIMIT 1";
+        $stmt = $db->prepare($query);
+        $stmt->bind_param('s', $this->ref_id);
+        $stmt->execute();      
+        if ($stmt->error != ""){
+            $result_query-> error = "error at query one transaction: ".$stmt->error;
+            $stmt->close();
+            return $result_query;
+        }
+        $rows = $stmt->get_result();
+        if($rows->num_rows == 0){
+            $stmt->close();
+            return $result_query;
+        }
+        $result = $rows->fetch_assoc();
+        $one->id = $result['id'];
+        $one->ref_id = $result['ref_id'];
+        $one->customer_id = $result['customer_id'];
+        $one->payment_id = $result['payment_id'];
+        $one->address = $result['address'];
+        $one->shipment_fee = $result['shipment_fee'];
+        $one->total = $result['total'];
+        $one->expired_date = $result['expired_date'];
+        $result_query->data = $one;
+        $stmt->close();
+        return $result_query;
+    }
+
     public function all($db,$list_query,$customer_id) {
         $result_query = new result_query();
         $all = array();
