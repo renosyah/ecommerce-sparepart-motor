@@ -1095,7 +1095,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 1,\n    \"customer_id\": 0,\n    \"payment_id\": 0,\n    \"address\": \"\",\n    \"shipment_fee\": 0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}",
+							"raw": "{\n    \"id\": 1,\n    \"ref_id\":\"\",\n    \"customer_id\": 0,\n    \"payment_id\": 0,\n    \"address\": \"\",\n    \"shipment_fee\": 0,\n    \"total\": 0,\n    \"expired_date\": \"\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1392,6 +1392,40 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "upload file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}{{host}}:{{port}}/api/upload_file.php",
+					"host": [
+						"{{protocol}}{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"upload_file.php"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
