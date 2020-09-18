@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "394d94d8-e168-489a-a1e5-573ff3140db4",
+		"_postman_id": "980c8473-374d-4bbc-93c5-76560a962ff0",
 		"name": "ecommerce-sparepart-motor",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -23,11 +23,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/user/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/user/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"user",
@@ -52,11 +51,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/user/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/user/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"user",
@@ -81,11 +79,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/user/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/user/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"user",
@@ -110,11 +107,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/user/login.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/user/login.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"user",
@@ -139,11 +135,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/user/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/user/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"user",
@@ -168,11 +163,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/user/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/user/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"user",
@@ -195,7 +189,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"reno\",\n    \"username\": \"renosyah\",\n    \"email\": \"reno@gmail.com\",\n    \"password\": \"123\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"ipul 2\",\n    \"username\": \"ipul 2\",\n    \"email\": \"ipul@gmail.com\",\n    \"password\": \"123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -203,11 +197,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/customer/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"customer",
@@ -232,11 +225,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/customer/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"customer",
@@ -261,11 +253,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/customer/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"customer",
@@ -290,11 +281,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/login.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/customer/login.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"customer",
@@ -319,11 +309,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/customer/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"customer",
@@ -348,11 +337,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/customer/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/customer/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"customer",
@@ -383,11 +371,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/payment/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"payment",
@@ -412,11 +399,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/payment/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"payment",
@@ -441,11 +427,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/payment/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"payment",
@@ -470,11 +455,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/payment/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"payment",
@@ -499,11 +483,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/payment/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/payment/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"payment",
@@ -526,7 +509,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"Tanki Bensin 6\",\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-gas-station-90.png\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Tanki Bensin 6\",\n    \"image_url\": \"{{protocol}}{{host}}{{port}}/img/icons8-gas-station-90.png\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -534,11 +517,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/category/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/category/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"category",
@@ -563,11 +545,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/category/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/category/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"category",
@@ -592,11 +573,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/category/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/category/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"category",
@@ -621,11 +601,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/category/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/category/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"category",
@@ -650,11 +629,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/category/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/category/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"category",
@@ -677,7 +655,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"category_id\": 1,\n    \"name\": \"mesin 3\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}:{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"category_id\": 1,\n    \"name\": \"mesin 3\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -685,11 +663,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/product/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/product/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"product",
@@ -714,11 +691,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/product/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/product/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"product",
@@ -743,11 +719,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/product/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/product/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"product",
@@ -772,11 +747,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/product/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/product/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"product",
@@ -801,11 +775,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/product/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/product/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"product",
@@ -836,11 +809,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -865,11 +837,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -894,11 +865,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/list_detail.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/list_detail.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -923,11 +893,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -952,11 +921,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -981,11 +949,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -1010,11 +977,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/cart/total.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/cart/total.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"cart",
@@ -1045,11 +1011,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/transaction/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"transaction",
@@ -1074,11 +1039,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/transaction/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"transaction",
@@ -1103,11 +1067,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/transaction/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"transaction",
@@ -1132,11 +1095,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/one_by_ref.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/transaction/one_by_ref.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"transaction",
@@ -1161,11 +1123,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/transaction/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"transaction",
@@ -1190,11 +1151,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/transaction/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/transaction/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"transaction",
@@ -1225,11 +1185,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/detail_transaction/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"detail_transaction",
@@ -1254,11 +1213,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/list.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/detail_transaction/list.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"detail_transaction",
@@ -1283,11 +1241,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/one.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/detail_transaction/one.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"detail_transaction",
@@ -1312,11 +1269,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/update.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/detail_transaction/update.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"detail_transaction",
@@ -1341,11 +1297,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/detail_transaction/delete.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/detail_transaction/delete.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"detail_transaction",
@@ -1376,11 +1331,10 @@
 							}
 						},
 						"url": {
-							"raw": "{{protocol}}{{host}}:{{port}}/api/checkout/add.php",
+							"raw": "{{protocol}}{{host}}{{port}}/api/checkout/add.php",
 							"host": [
-								"{{protocol}}{{host}}"
+								"{{protocol}}{{host}}{{port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"api",
 								"checkout",
@@ -1414,11 +1368,10 @@
 					}
 				},
 				"url": {
-					"raw": "{{protocol}}{{host}}:{{port}}/api/upload_file.php",
+					"raw": "{{protocol}}{{host}}{{port}}/api/upload_file.php",
 					"host": [
-						"{{protocol}}{{host}}"
+						"{{protocol}}{{host}}{{port}}"
 					],
-					"port": "{{port}}",
 					"path": [
 						"api",
 						"upload_file.php"
