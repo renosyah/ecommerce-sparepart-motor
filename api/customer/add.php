@@ -20,7 +20,23 @@ $data = handle_request();
 
 $usr = new customer();
 $usr->set($data);
-$result = $usr->add(get_connection(include("../config.php")));
+$result = $usr->one_by_email(get_connection(include("../config.php")));
+if ($result->data != null){
+    $result->data = null;
+    $result->error = "email already exist!";
+    echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    exit;
+}
 
-echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+$result = $usr->add(get_connection(include("../config.php")));
+if ($result->data != "ok"){
+    $result->data = null;
+    $result->error = "failed add to db!";
+    echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    exit;
+}
+
+$return_result = $usr->one_by_email(get_connection(include("../config.php")));
+ 
+echo json_encode($return_result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>

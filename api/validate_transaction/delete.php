@@ -6,7 +6,7 @@ include_once "../handler.php";
 // menggabungkan kode dari file kota.php
 // yg mana model kota dibutuhkan
 // untuk query
-include("../../model/customer.php");
+include("../../model/validate_transaction.php");
 
 // menggabungkan kode dari file db.php
 // yg mana db digunakan untuk memanggil koneksi
@@ -18,15 +18,9 @@ include("../../model/db.php");
 // menghandle request yg dikirim client
 $data = handle_request();
 
-$usr = new customer();
+$usr = new validate_transaction();
 $usr->set($data);
-$result = $usr->one_by_email(get_connection(include("../config.php")));
-if ($result->data->password != $data->password){
-    $result->data = null;
-    $result->error = "username or password invalid";
-    echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    exit;
-}
+$result = $usr->delete(get_connection(include("../config.php")));
 
 echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>

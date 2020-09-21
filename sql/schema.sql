@@ -71,3 +71,10 @@ CREATE TABLE detail_transaction(
     FOREIGN KEY (transaction_id) REFERENCES transaction(id),
     FOREIGN KEY (product_id) REFERENCES product(id)
 );
+
+CREATE TABLE validate_transaction(
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    transaction_id INT(11) NOT NULL,
+    image_url TEXT,
+    FOREIGN KEY (transaction_id) REFERENCES transaction(id)
+);

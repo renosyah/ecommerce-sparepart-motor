@@ -5,33 +5,29 @@
 // object yg digunakan untuk hasil
 include("result_query.php");
 
-class customer {
+class validate_transaction {
     public $id;
-    public $name;
-    public $username;
-    public $email;
-    public $password;
+    public $transaction_id;
+    public $image_url;
 
     public function __construct(){
     }
 
     public function set($data){
         $this->id = (int) $data->id;
-        $this->name = $data->name;
-        $this->username = $data->username;
-        $this->email =  $data->email;
-        $this->password = $data->password;
+        $this->transaction_id = (int) $data->transaction_id;
+        $this->image_url = $data->image_url;
     }
 
     public function add($db) {
         $result_query = new result_query();
         $result_query->data = "ok";
-        $query = "INSERT INTO customer (name,username,email,password) VALUES (?,?,?,?)";
+        $query = "INSERT INTO validate_transaction (transaction_id,image_url) VALUES (?,?)";
         $stmt = $db->prepare($query);
-        $stmt->bind_param('ssss', $this->name, $this->username, $this->email, $this->password);
+        $stmt->bind_param('is',$this->transaction_id,$this->image_url);
         $stmt->execute();
         if ($stmt->error != ""){
-            $result_query->error =  "error at add new customer : ".$stmt->error;
+            $result_query->error =  "error at add new validate_transaction : ".$stmt->error;
             $result_query->data = "not ok";
         }
         $stmt->close();
@@ -40,13 +36,13 @@ class customer {
     
     public function one($db) {
         $result_query = new result_query();
-        $one = new customer();
-        $query = "SELECT id,name,username,email,password FROM customer WHERE id=? LIMIT 1";
+        $one = new validate_transaction();
+        $query = "SELECT id,transaction_id,image_url FROM validate_transaction WHERE id=? LIMIT 1";
         $stmt = $db->prepare($query);
         $stmt->bind_param('i', $this->id);
         $stmt->execute();      
         if ($stmt->error != ""){
-            $result_query-> error = "error at query one customer: ".$stmt->error;
+            $result_query-> error = "error at query one validate_transaction: ".$stmt->error;
             $stmt->close();
             return $result_query;
         }
@@ -57,53 +53,26 @@ class customer {
         }
         $result = $rows->fetch_assoc();
         $one->id = $result['id'];
-        $one->name = $result['name'];
-        $one->username = $result['username'];
-        $one->email = $result['email'];
-        $one->password = $result['password'];
-        $result_query->data = $one;
-        $stmt->close();
-        return $result_query;
-    }
- 
-    public function one_by_email($db) {
-        $result_query = new result_query();
-        $one = new customer();
-        $query = "SELECT id,name,username,email,password FROM customer WHERE email=? LIMIT 1";
-        $stmt = $db->prepare($query);
-        $stmt->bind_param('s', $this->email);
-        $stmt->execute();      
-        if ($stmt->error != ""){
-            $result_query-> error = "error at query one customer: ".$stmt->error;
-            $stmt->close();
-            return $result_query;
-        }
-        $rows = $stmt->get_result();
-        if($rows->num_rows == 0){
-            $result_query->error = "username or password invalid";
-            $stmt->close();
-            return $result_query;
-        }
-        $result = $rows->fetch_assoc();
-        $one->id = $result['id'];
-        $one->name = $result['name'];
-        $one->username = $result['username'];
-        $one->email = $result['email'];
-        $one->password = $result['password'];
+        $one->transaction_id= $result['transaction_id'];
+        $one->image_url = $result['image_url'];
         $result_query->data = $one;
         $stmt->close();
         return $result_query;
     }
 
-    public function all($db,$list_query) {
+    public function all($db,$list_query,$customer_id) {
         $result_query = new result_query();
         $all = array();
         $query = "SELECT 
-                    id,name,username,email,password
+                    v.id,v.transaction_id,v.image_url
                 FROM 
-                    customer
+                    validate_transaction v
+                INNER JOIN
+                    transaction t
                 WHERE
                     ".$list_query->search_by." LIKE ?
+                AND
+                    t.customer_id = ?
                 ORDER BY
                     ".$list_query->order_by." ".$list_query->order_dir." 
                 LIMIT ? 
@@ -112,10 +81,10 @@ class customer {
         $search = "%".$list_query->search_value."%";
         $offset = $list_query->offset;
         $limit =  $list_query->limit;
-        $stmt->bind_param('sii',$search ,$limit, $offset);
+        $stmt->bind_param('siii',$search ,$customer_id ,$limit, $offset);
         $stmt->execute();
         if ($stmt->error != ""){
-            $result_query-> error = "error at query all kota : ".$stmt->error;
+            $result_query-> error = "error at query all validate_transaction : ".$stmt->error;
             $stmt->close();
             return $result_query;
         }
@@ -127,12 +96,10 @@ class customer {
         }
 
         while ($result = $rows->fetch_assoc()){
-            $one = new customer();
+            $one = new validate_transaction();
             $one->id = $result['id'];
-            $one->name = $result['name'];
-            $one->username = $result['username'];
-            $one->email = $result['email'];
-            $one->password = $result['password'];
+            $one->transaction_id= $result['transaction_id'];
+            $one->image_url = $result['image_url'];
             array_push($all,$one);
         }
         $result_query->data = $all;
@@ -143,12 +110,12 @@ class customer {
     public function update($db) {
         $result_query = new result_query();
         $result_query->data = "ok";
-        $query = "UPDATE customer SET name = ?,username = ?,email = ?,password = ? WHERE id=?";
+        $query = "UPDATE validate_transaction SET transaction_id = ?,image_url = ? WHERE id=?";
         $stmt = $db->prepare($query);
-        $stmt->bind_param('ssssi', $this->name, $this->username, $this->email, $this->password,$this->id);
+        $stmt->bind_param('isi', $this->transaction_id,$this->image_url, $this->id);
         $stmt->execute();
         if ($stmt->error != ""){
-            $result_query->error = "error at update one customer : ".$stmt->error;
+            $result_query->error = "error at update one validate_transaction : ".$stmt->error;
             $result_query->data = "not ok";
             $stmt->close();
             return $result_query;
@@ -160,12 +127,12 @@ class customer {
     public function delete($db) {
         $result_query = new result_query();
         $result_query->data = "ok";
-        $query = "DELETE FROM customer WHERE id=?";
+        $query = "DELETE FROM validate_transaction WHERE id=?";
         $stmt = $db->prepare($query);
         $stmt->bind_param('i', $this->id);
         $stmt->execute();
         if ($stmt->error != ""){
-            $result_query->error = "error at delete one customer : ".$stmt->error;
+            $result_query->error = "error at delete one validate_transaction : ".$stmt->error;
             $result_query->data = "not ok";
             $stmt->close();
             return $result_query;
