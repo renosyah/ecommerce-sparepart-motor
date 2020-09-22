@@ -27,7 +27,7 @@ $query = new list_query();
 $query->set($data);
 
 $usr = new validate_transaction();
-$result = $usr->all(get_connection(include("../config.php")),$query,$data->customer_id);
+$result = $usr->all(get_connection(include("../config.php")),$query,$data->transaction_id);
 
 echo json_encode($result, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>

@@ -60,19 +60,17 @@ class validate_transaction {
         return $result_query;
     }
 
-    public function all($db,$list_query,$customer_id) {
+    public function all($db,$list_query,$transaction_id) {
         $result_query = new result_query();
         $all = array();
         $query = "SELECT 
-                    v.id,v.transaction_id,v.image_url
+                    id,transaction_id,image_url
                 FROM 
-                    validate_transaction v
-                INNER JOIN
-                    transaction t
+                    validate_transaction
                 WHERE
                     ".$list_query->search_by." LIKE ?
                 AND
-                    t.customer_id = ?
+                    transaction_id = ?
                 ORDER BY
                     ".$list_query->order_by." ".$list_query->order_dir." 
                 LIMIT ? 
@@ -81,7 +79,7 @@ class validate_transaction {
         $search = "%".$list_query->search_value."%";
         $offset = $list_query->offset;
         $limit =  $list_query->limit;
-        $stmt->bind_param('siii',$search ,$customer_id ,$limit, $offset);
+        $stmt->bind_param('siii',$search ,$transaction_id ,$limit, $offset);
         $stmt->execute();
         if ($stmt->error != ""){
             $result_query-> error = "error at query all validate_transaction : ".$stmt->error;
