@@ -5,7 +5,7 @@ include("../model/result_query.php");
 include("../util/generator.php");
 
 $result = new result_query();
-$result->data = "";
+$result->data = null;
 
 $file_name		 = $_FILES['file']['name'];
 $tmp_file	 	 = $_FILES['file']['tmp_name'];
