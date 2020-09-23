@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"reno\",\n    \"username\": \"renosyah\",\n    \"password\": \"123\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"ipul admin\",\n    \"username\": \"ipuladmin\",\n    \"password\": \"123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -189,7 +189,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"ipul 2\",\n    \"username\": \"ipul 2\",\n    \"email\": \"ipul@gmail.com\",\n    \"password\": \"123\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"ipul 2\",\n    \"username\": \"ipul 2\",\n    \"email\": \"ipul2@gmail.com\",\n    \"password\": \"123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -273,7 +273,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"username\": \"renosyah\",\n    \"email\": \"\",\n    \"password\": \"12345\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"\",\n    \"username\": \"\",\n    \"email\": \"ipul@gmail.com\",\n    \"password\": \"123d\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -363,7 +363,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"Bank BCA\",\n    \"detail\": \"1555-5555-55555555-5555\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Bank BRI\",\n    \"detail\": \"1444-4444-4444-4444\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -509,7 +509,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"name\": \"Tanki Bensin 6\",\n    \"image_url\": \"{{protocol}}{{host}}{{port}}/img/icons8-gas-station-90.png\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"name\": \"Lainnya\",\n    \"image_url\": \"http://app-demo-api.000webhostapp.com/img/category/ride.png\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -537,7 +537,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -593,7 +593,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 3,\n    \"name\": \"Tanki Bensin 3\",\n    \"image_url\": \"https://static.thenounproject.com/png/378251-200.png\"\n}",
+							"raw": "{\n    \"id\": 3,\n    \"name\": \"Slebor\",\n    \"image_url\": \"http://app-demo-api.000webhostapp.com/img/category/ride.png\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -621,7 +621,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 4,\n    \"name\": \"\",\n    \"image_url\": \"\"\n}",
+							"raw": "{\n    \"id\": 7,\n    \"name\": \"\",\n    \"image_url\": \"\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -655,7 +655,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 0,\n    \"category_id\": 1,\n    \"name\": \"mesin 3\",\n    \"price\": 200,\n    \"stock\": 4,\n    \"rating\": 2,\n    \"image_url\": \"{{protocol}}{{host}}{{port}}/img/icons8-fog-lamp-90.png\",\n    \"detail\": \"ini produk untuk motor\"\n}",
+							"raw": "{\n    \"id\": 0,\n    \"category_id\": 5,\n    \"name\": \"tromol belakang\",\n    \"price\": 300000,\n    \"image_url\": \"{{protocol}}{{host}}{{port}}/img/product/mK3eBbCwOl.jpeg\",\n    \"detail\": \"bahan besi kuat, lengkap dengan tuas pengungkit, ori second\",\n    \"stock\": 10,\n    \"rating\": 5\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -683,7 +683,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"category_id\": 1,\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"name\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"category_id\": 3,\n    \"search_by\": \"name\",\n    \"search_value\": \"\",\n    \"order_by\": \"id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -739,7 +739,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 3,\n    \"category_id\": 1,\n    \"name\": \"mesin 3a\",\n    \"price\": 2300,\n    \"stock\": 15,\n    \"rating\": 3,\n    \"image_url\": \"https://image.made-in-china.com/43f34j00IvuEbGVPqwgT/Tianda-156fmi-F28-125cc-Motorcycle-Engine-Assembley-F28-CG125-.jpg\",\n    \"detail\": \"ini produk untuk motor update\"\n}",
+							"raw": "{\n    \"id\": 11,\n    \"category_id\": 2,\n    \"name\": \"batok lampu L2G\",\n    \"price\": 500000,\n    \"stock\": 10,\n    \"rating\": 5,\n    \"image_url\": \"http://app-demo-api.000webhostapp.com/img/product/bHcP0nPEwW.jpeg\",\n    \"detail\": \"batok lampu L2G kaleng, kondisi baru repro\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1031,7 +1031,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"customer_id\": 1,\n    \"search_by\": \"expired_date\",\n    \"search_value\": \"\",\n    \"order_by\": \"expired_date\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"raw": "{\n    \"customer_id\": 7,\n    \"search_by\": \"expired_date\",\n    \"search_value\": \"\",\n    \"order_by\": \"expired_date\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1305,6 +1305,151 @@
 								"api",
 								"detail_transaction",
 								"delete.php"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "validate transaction",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"transaction_id\": 2,\n    \"image_url\": \"http://app-demo-api.000webhostapp.com/img/product/IUMhxZmnbK.jpeg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/validate_transaction/add.php",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"validate_transaction",
+								"add.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"transaction_id\": 33,\n    \"search_by\": \"id\",\n    \"search_value\": \"\",\n    \"order_by\": \"id\",\n    \"order_dir\": \"asc\",\n    \"offset\": 0,\n    \"limit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/validate_transaction/list.php",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"validate_transaction",
+								"list.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"category_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\",\n    \"detail\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/validate_transaction/one.php",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"validate_transaction",
+								"one.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 11,\n    \"category_id\": 2,\n    \"name\": \"batok lampu L2G\",\n    \"price\": 500000,\n    \"stock\": 10,\n    \"rating\": 5,\n    \"image_url\": \"http://app-demo-api.000webhostapp.com/img/product/bHcP0nPEwW.jpeg\",\n    \"detail\": \"batok lampu L2G kaleng, kondisi baru repro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/validate_transaction/update.php",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"validate_transaction",
+								"update.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"category_id\": 0,\n    \"name\": \"\",\n    \"price\": 0,\n    \"stock\": 0,\n    \"rating\": 0,\n    \"image_url\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}{{host}}{{port}}/api/validate_transactiondelete.php",
+							"host": [
+								"{{protocol}}{{host}}{{port}}"
+							],
+							"path": [
+								"api",
+								"validate_transactiondelete.php"
 							]
 						}
 					},
